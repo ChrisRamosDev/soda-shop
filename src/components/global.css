@@ -1,0 +1,82 @@
+:root {
+  --font-main: "Big Shoulders Display", Arial, Helvetica, sans-serif;
+  --color-main: #0ead69;
+  --color-black: #333;
+  --color-font: #fff;
+  --btn-scale: transform 150ms;
+  --shadow-sharp: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.05);
+  --shadow-diffuse: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+  /* media-query scale */
+  --mq-sm: 479px;
+  --mq-md: 639px;
+  --mq-lg: 1023px;
+  --mq-xl: 1365px;
+  --mq-2x: 1919px;
+  /* Modular scale sizing */
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: var(--s3);
+}
+
+.products-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: var(--s3);
+}
+
+.product-card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: var(--s1) var(--s0);
+}
+
+.fluid-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--color-main);
+  color: #fff;
+  border-style: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: var(--shadow-sharp);
+          box-shadow: var(--shadow-sharp);
+  -webkit-transition: var(--btn-scale);
+  transition: var(--btn-scale);
+}
+
+button:hover {
+  background-color: #fff;
+  border: 2px solid var(--color-main);
+  color: var(--color-main);
+}
+/*# sourceMappingURL=global.css.map */
